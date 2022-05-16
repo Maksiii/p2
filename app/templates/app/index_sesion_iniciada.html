@@ -1,0 +1,52 @@
+{% extends 'app/base_logeada.html'%}
+{% load static %}
+{% block contenido_iniciado %}
+
+
+<main class="main">
+  <div class="container ">
+    <h2>Productos</h2>
+    <section class="container-products">
+      {% for aux in listarProductos %}
+      <div class="products">
+        <!-- .products*4>img.products__img+.product__description>h3.product__title+span.producto__price -->
+
+      
+        {% if aux.imagen %}
+          <img src="{{ aux.imagen.url }}" class="img-fluid item-img w-100 mb-3" width="200">
+        {% else %}
+        <!--aqui si no hay imagen mustra la imagen de defecto-->
+          <img src="{% static 'app/img/imagen_sin_imagen.png' %}" class="img-fluid item-img w-100 mb-3" width="200px">
+        {% endif %}
+
+        <!-- <img src="{% static 'app/img/Alimento-perro-raza-mediana-y-grande-8-kg.png' %}" alt="" class="products__img" width="200px"> -->
+        <div class="product__description">
+          <h3 class="nombre_producto">{{ aux.nombre }}</h3>
+          <h5 class="marca__precio">{{ aux.marca }}</h5>
+          <h5 class="precio_producto">${{ aux.precio }}/un</h5>
+          <h5 class="stock_producto">stock:{{ aux.stock }}</h5>
+
+        </div>
+        <form action="" method="POST">
+          {% csrf_token %}
+            <input type="text" name="nombre_producto" id="nombre_producto" value="{{ aux.nombre }}">
+            <input type="text" name="precio_producto" id="precio_producto" value="{{ aux.precio }}">
+            <input type="text" name="imagen_producto" id="imagen_producto" value="{{ aux.imagen }}">
+            <input type="submit" value="Carrito" style="cursor: pointer;" class="btn btn-success btn-sm">
+        </form>
+      </div>
+      {% endfor %}
+
+
+      
+
+
+    </section>
+
+  </div>
+
+</main>
+
+
+  
+{% endblock  %}

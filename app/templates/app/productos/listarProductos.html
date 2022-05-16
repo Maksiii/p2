@@ -1,0 +1,47 @@
+{% extends 'app/base_logeada.html'%}
+
+{% load crispy_forms_tags %}
+{% load static %}}
+{% block contenido_iniciado %}
+
+
+
+<table class="table table-condensed table-striped bg-white rounded">
+    <tr>
+        <thead>
+   
+            <td>PLU CODIGO</td>
+            <td>NOMBRE</td>
+            <td>MARCA</td>
+            <td>PRECIO</td>
+            <td>STOCK</td>
+            <td>TIPO</td>
+            <td>IMAGEN</td>
+            <td>FECHA INGRESO</td>
+            <td>FECHA MODIFICACION</td>
+        </thead>
+        <Tbody>
+            {% for aux in listarProductos %}
+            <tr>
+                <td>{{ aux.plu_codigo }}</td>
+                <td>{{ aux.nombre }}</td>
+                <td>{{ aux.marca }}</td>
+                <td>{{ aux.precio }}</td>
+                <td>{{ aux.stock }}</td>
+                <td>{{ aux.tipo }}</td>
+                <td>{{ aux.imagen }}</td>
+                <td>{{ aux.fecha_ingreso }}</td>
+                <td>{{ aux.fecha_modificacion }}</td>
+                <td>
+                    <a href="{% url 'modificarProductos' aux.plu_codigo %}" class="btn btn-info">Modificar</a>
+                    <a onclick ="eliminar({{ aux.plu_codigo }})" class="btn btn-danger">Eliminar</a>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </Tbody>
+
+    
+</table>
+  
+{% endblock  %}

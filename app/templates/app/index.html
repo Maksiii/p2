@@ -1,0 +1,44 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block contenido %}
+<main class="main">
+    <div class="container">
+      <h2>Productos</h2>
+      <section class="container-products">
+        {% for aux in listarProductos %}
+        <div class="products">
+          <!-- .products*4>img.products__img+.product__description>h3.product__title+span.producto__price -->
+
+        
+          {% if aux.imagen %}
+            <img src="{{ aux.imagen.url }}" class="img-fluid item-img w-100 mb-3" width="200">
+          {% else %}
+          <!--aqui si no hay imagen mustra la imagen de defecto-->
+            <img src="{% static 'app/img/imagen_sin_imagen.png' %}" class="img-fluid item-img w-100 mb-3" width="200px">
+          {% endif %}
+
+          <!-- <img src="{% static 'app/img/Alimento-perro-raza-mediana-y-grande-8-kg.png' %}" alt="" class="products__img" width="200px"> -->
+          <div class="product__description">
+            <h3 class="product__titulo">{{ aux.nombre }}</h3>
+            <h5 class="product__precio">{{ aux.marca }}</h5>
+            <h5 class="product__precio">${{ aux.precio }}/un</h5>
+            <h5 class="product__precio">stock:{{ aux.stock }}</h5>
+
+          </div>
+          <a class="btn btn-success" class="nav-link" href="#" data-toggle="modal" data-target="#myModalLogin">Agregar</a>
+          
+        </div>
+        {% endfor %}
+
+<!-- <a  class="btn btn-success" href="{% url 'segumiento_de_compra' %}">Pagar</a> -->
+        
+
+
+      </section>
+
+    </div>
+
+</main>
+
+
+{% endblock  %}

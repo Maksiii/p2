@@ -1,0 +1,74 @@
+{% extends 'app/base_logeada.html'%}
+{% load static %}
+{% block contenido_iniciado %}
+
+
+<main class="main">
+    <div class="row">
+
+        <div class="col-12 col-sm-3">
+
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="container">
+            <h2>Tu Carro</h2>
+            <section class="container-products">
+              
+                {% for aux in listarProductos %}
+                <div class="products">
+                  <!-- .products*4>img.products__img+.product__description>h3.product__title+span.producto__price -->
+
+                
+                  {% if aux.imagen %}
+                    <img src="{{ aux.imagen.url }}" class="img-fluid item-img w-100 mb-3" width="200">
+                  {% else %}
+                  <!--aqui si no hay imagen mustra la imagen de defecto-->
+                    <img src="{% static 'app/img/imagen_sin_imagen.png' %}" class="img-fluid item-img w-100 mb-3" width="200px">
+                  {% endif %}
+
+                  <!-- <img src="{% static 'app/img/Alimento-perro-raza-mediana-y-grande-8-kg.png' %}" alt="" class="products__img" width="200px"> -->
+                  <div class="product__description">
+                    <h3 class="nombre_producto">{{ aux.nombre }}</h3>
+                    <h5 class="marca__precio">{{ aux.marca }}</h5>
+                    <h5 class="precio_producto">${{ aux.precio }}/un</h5>
+                    <h5 class="stock_producto">stock:{{ aux.stock }}</h5>
+
+                  </div>
+                 
+                </div>
+                {% endfor %}
+              
+              
+            </div>
+          </div>
+
+          <!-- -->
+          <div class="col-12 col-sm-3">
+            <div class="products">
+              <!-- .products*4>img.products__img+.product__description>h3.product__title+span.producto__price -->
+                <h2 class="product__titulo">Resumen de la compra</h3>
+                <h5 class="product__precio">Detalle de la compra</h5>
+                <h6>producto 1  $ 0000000</h6>
+                <h6>producto 1  $ 0000000</h6>
+                <h6>delivery    $ 0000000</h6>
+                <h6>Total:      $ 0000000</h6>
+                <!-- <input type="submit" value="Pagar" style="cursor: pointer;" class="btn btn-success"> -->
+                
+                <a  class="btn btn-success" href="{% url 'comprado' %}">Pagar</a>  
+           
+              </div>
+
+              
+            </div>
+          </div>
+    
+
+
+        </section>
+      
+    </div>
+
+</main>
+
+
+{% endblock  %}

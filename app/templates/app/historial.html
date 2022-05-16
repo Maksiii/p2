@@ -1,0 +1,56 @@
+{% extends 'app/base_logeada.html'%}
+{% load static %}
+{% block contenido_iniciado %}
+
+
+
+
+<main class="tabla">
+  
+  <div class="container">
+    <h2>Historial de compras</h2>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Imagen</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> <img src="img/Alimento-perro-raza-mediana-y-grande-8-kg.png" alt="" width="50px"></td>
+          <td>Comida Dog Chow</td>
+          <td>$9990</td>
+          <td>1</td>
+          <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+          <td> <img src="img/Alimento-seco-gato-adulto-carne-3-kg.webp" alt="" width="50px"></td>
+          <td>Comida Whiskas</td>
+          <td>$9990</td>
+          <td>1</td>
+          <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+          <td> <img src="img/41s4oyCH7hL._SL500_.jpg" alt="" width="50px"></td>
+          <td>Cama para Perro</td>
+          <td>$9990</td>
+          <td>1</td>
+          <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+          <td> <img src="img/cueva-suave-silas.jpg" alt="" width="50px"></td>
+          <td>Cama para Gatos</td>
+          <td>$9990</td>
+          <td>1</td>
+          <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+  </div>
+
+</main>
+
+{% endblock  %}

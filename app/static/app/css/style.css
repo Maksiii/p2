@@ -1,0 +1,292 @@
+
+/* .row{
+    background-image: url("../img/55384365-humanos-y-aves-pies-patrón-transparente-de-perros-y-gatos-patas-colorido-vector-de-fondo.webp");
+    padding-bottom: 50px;
+}
+.card{
+    padding: 10px;
+    position: fixed;
+} */
+
+.Common-module--section--z5uyA {
+  display: grid;
+  grid-template-columns: minmax(auto,1280px);
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.media-body{
+    float: left;
+
+}
+
+.container{
+    border: 1px solid;
+    padding: 10px;
+    background-color: mediumseagreen ;
+
+}
+.products{
+    background-color: white;
+
+}
+.footer{
+  width: 100%;
+  height: 100%;
+}
+
+.container-products-historial{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  right: 1px;
+
+}
+
+.products-historial{
+  border: 1px solid;
+  padding: 10px;
+  background-color: white;
+}
+
+.products-historial img{
+  float: left;
+}
+.container-historial{
+  border: 1px solid;
+  padding: 10px;
+  background-color: white;
+}
+
+.product__description-seguimiento{
+  padding: 100px;
+}
+
+.products-seguimiento{
+  border: 1px solid;
+  padding: 10px;
+  background-color: white;
+}
+
+.products-seguimiento img{
+  float: left;
+}
+
+.tabla{
+  background-color: white;
+  padding: 20px;
+  background-image: url("{% static 'app/img/fondo.webp' %}");
+  
+}
+
+
+
+/* video */
+.main{
+    padding: 20px;
+    background-image: url("../img/fondo.webp");
+  }
+
+.container-products{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    right: 1px;
+
+}
+
+.products{
+    border: 1px solid;
+    padding: 10px;
+}
+
+/* .products button{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 200px;
+
+}
+
+.product__description{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+ */
+
+/* contadores */
+ /* .product-count {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    height: 30px;
+  }
+  
+  .product-count a {
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+  } */
+  
+
+
+  .button-count {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #2196F3;
+    color: white;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    outline: none;
+  }
+  .button-count:active {
+    background-color: #1565C0;
+  }
+  
+  .number-product {
+    display: inline-block;
+    width: 46px;
+    height: 28px;
+    font-size: 24px;
+    border: 1px solid silver;
+    text-align: center;
+  }
+  
+  :disabled {
+    background-color: silver;
+  }
+  
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .modal-body h5{
+    border: 1px solid;
+    padding: 10px;
+
+  }
+
+  .card{
+    position: center;
+  }
+ 
+  .main{
+    padding: 20px;
+    
+  }
+
+
+.bg-green{
+ background-color: green; 
+}
+
+/*CREACION DE USUARIO*/
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box ;
+
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family:Arial, Helvetica, sans-serif;
+  background: linear-gradient(27deg,mediumseagreen 50%, green 50%);
+}
+
+.form-body{
+  width: 400px;
+  min-width: 300px;
+  border-radius: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border:solid 1px yellow;
+  margin: 10px;
+  background: green;
+}
+
+.form-body img{
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+}
+
+.text{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600; 
+  color:#fff;
+  margin-bottom: 25px;
+}
+
+.form-body input{
+  display: block;
+  margin: auto;
+  height: 48px;
+  width: 75%;
+  padding-left : 10px;
+  color: #fff;
+  border: 1px solid#fff;
+  border-radius : 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color : transparent;
+  border-top-left-radius : 18px;
+  border-bottom-right-radius : 10px;
+  font-size: 1rem;
+  outline: none;
+
+}
+
+.form-body input[type="password"]{
+  margin-top: 20px;
+
+}
+
+::placeholder{
+  font-size: 1rem;  
+  color:rgb(255,255,255, .596);
+
+}
+
+.form-body input:hover{
+  transition: .5s;
+  border:1px solid #2980b9;
+  color: #2498db;
+}
+
+.form-body button{
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom : 30px;
+  height: 40px;
+  width: 78%;
+  background: transparent;
+  color: #b9c4c6;
+  border-radius : 2px;
+  Cursor: pointer;
+  outline: none;
+  border: 2px solid lawngreen;
+  transition: all .5s ease;
+
+}
+
+.form-body button:hover {
+  color:#d5dbdd ;
+  border:2px solid green;
+  background:linear-gradient( green,mediumseagreen);
+
+}
+/*CREACION DE USUARIO*/
+    
